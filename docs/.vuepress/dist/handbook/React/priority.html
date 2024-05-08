@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>React——优先级 | 倒数的博客</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/blog/headPortrait.png">
+    <meta name="description" content="明月松间照，清泉石上流。">
+    
+    <link rel="preload" href="/blog/assets/css/0.styles.53d627a5.css" as="style"><link rel="preload" href="/blog/assets/js/app.5677d241.js" as="script"><link rel="preload" href="/blog/assets/js/3.24b53f44.js" as="script"><link rel="preload" href="/blog/assets/js/1.eea0989c.js" as="script"><link rel="preload" href="/blog/assets/js/21.1f533c3e.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.e063a2f2.js"><link rel="prefetch" href="/blog/assets/js/11.1eaad883.js"><link rel="prefetch" href="/blog/assets/js/12.85f4ca40.js"><link rel="prefetch" href="/blog/assets/js/13.7391c946.js"><link rel="prefetch" href="/blog/assets/js/14.e9e5cdd1.js"><link rel="prefetch" href="/blog/assets/js/15.d40d219a.js"><link rel="prefetch" href="/blog/assets/js/16.8d5168bd.js"><link rel="prefetch" href="/blog/assets/js/17.90e55e38.js"><link rel="prefetch" href="/blog/assets/js/18.416eb595.js"><link rel="prefetch" href="/blog/assets/js/19.acb1d229.js"><link rel="prefetch" href="/blog/assets/js/20.b4979df8.js"><link rel="prefetch" href="/blog/assets/js/22.00a23ba9.js"><link rel="prefetch" href="/blog/assets/js/23.f2488548.js"><link rel="prefetch" href="/blog/assets/js/4.78f1f1f7.js"><link rel="prefetch" href="/blog/assets/js/5.d2d50703.js"><link rel="prefetch" href="/blog/assets/js/6.3c7d161b.js"><link rel="prefetch" href="/blog/assets/js/7.dc09f94f.js"><link rel="prefetch" href="/blog/assets/js/8.7bf3728c.js"><link rel="prefetch" href="/blog/assets/js/9.f6d929f7.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.53d627a5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-130b300a><div data-v-130b300a><div class="password-shadow password-wrapper-out" style="display:none;" data-v-25ba6db2 data-v-130b300a data-v-130b300a><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>倒数的博客</h3> <p class="description" data-v-25ba6db2 data-v-25ba6db2>明月松间照，清泉石上流。</p> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><!---->
+            
+          <!---->
+          2024
+        </a></span></div></div> <div class="hide" data-v-130b300a><header class="navbar" data-v-130b300a><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/headPortrait.png" alt="倒数的博客" class="logo"> <span class="site-name">倒数的博客</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      目录
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/包管理/" class="nav-link"><i class="undefined"></i>
+  包管理
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/javaScript/" class="nav-link"><i class="undefined"></i>
+  javaScript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/react/" class="nav-link"><i class="undefined"></i>
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/Vue/" class="nav-link"><i class="undefined"></i>
+  Vue
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      友情链接
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/count-back" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://leetcode.cn/u/dao-shu-8/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-coding"></i>
+  Leetcode
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-130b300a></div> <aside class="sidebar" data-v-130b300a><div class="personal-info-wrapper" data-v-39576ba9 data-v-130b300a><img src="headPortrait.png" alt="author-avatar" class="personal-img" data-v-39576ba9> <!----> <div class="num" data-v-39576ba9><div data-v-39576ba9><h3 data-v-39576ba9>13</h3> <h6 data-v-39576ba9>文章</h6></div> <div data-v-39576ba9><h3 data-v-39576ba9>9</h3> <h6 data-v-39576ba9>标签</h6></div></div> <ul class="social-links" data-v-39576ba9><li class="social-item" data-v-39576ba9><i class="iconfont reco-github" style="color:#67cc86;" data-v-39576ba9></i></li><li class="social-item" data-v-39576ba9><i class="iconfont reco-coding" style="color:#f8b26a;" data-v-39576ba9></i></li></ul> <hr data-v-39576ba9></div> <nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link"><i class="iconfont reco-home"></i>
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      目录
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/categories/包管理/" class="nav-link"><i class="undefined"></i>
+  包管理
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/javaScript/" class="nav-link"><i class="undefined"></i>
+  javaScript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/react/" class="nav-link"><i class="undefined"></i>
+  react
+</a></li><li class="dropdown-item"><!----> <a href="/blog/categories/Vue/" class="nav-link"><i class="undefined"></i>
+  Vue
+</a></li></ul></div></div><div class="nav-item"><a href="/blog/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/blog/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时间线
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      友情链接
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/count-back" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://leetcode.cn/u/dao-shu-8/" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-coding"></i>
+  Leetcode
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-25ba6db2 data-v-130b300a><h3 class="title" data-v-25ba6db2 data-v-25ba6db2>React——优先级</h3> <!----> <label id="box" class="inputBox" data-v-25ba6db2 data-v-25ba6db2><input type="password" value="" data-v-25ba6db2> <span data-v-25ba6db2>Konck! Knock!</span> <button data-v-25ba6db2>OK</button></label> <div class="footer" data-v-25ba6db2 data-v-25ba6db2><span data-v-25ba6db2><i class="iconfont reco-theme" data-v-25ba6db2></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-25ba6db2>vuePress-theme-reco</a></span> <span data-v-25ba6db2><i class="iconfont reco-copyright" data-v-25ba6db2></i> <a data-v-25ba6db2><!---->
+            
+          <!---->
+          2024
+        </a></span></div></div> <div data-v-130b300a><main class="page"><section><div class="page-title"><h1 class="title">React——优先级</h1> <div data-v-f875f3fc><i class="iconfont reco-account" data-v-f875f3fc><span data-v-f875f3fc>倒数</span></i> <i class="iconfont reco-date" data-v-f875f3fc><span data-v-f875f3fc>2023/8/29</span></i> <!----> <i class="tags iconfont reco-tag" data-v-f875f3fc><span class="tag-item" data-v-f875f3fc>react</span></i></div></div> <div class="theme-reco-content content__default"><h1 id="产生更新"><a href="#产生更新" class="header-anchor">#</a> 产生更新</h1> <p>当调用 setState 时，意味着组件对应的 fiber 节点产生了一个更新。setState 实际上是生成一个 update 对象，调用 enqueueSetState，将这个 update 对象连接到 fiber 节点的 updateQueue 链表中.</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token class-name">Component</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">setState</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">partialState<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>updater<span class="token punctuation">.</span><span class="token function">enqueueSetState</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> partialState<span class="token punctuation">,</span> callback<span class="token punctuation">,</span> <span class="token string">&quot;setState&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>enqueueSetState 的职责是创建 update 对象，将它入队 fiber 节点的 update 链表（updateQueue），然后发起调度。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>  <span class="token function">enqueueSetState</span><span class="token punctuation">(</span><span class="token parameter">inst<span class="token punctuation">,</span> payload<span class="token punctuation">,</span> callback</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 获取当前触发更新的fiber节点。inst是组件实例</span>
+    <span class="token keyword">const</span> fiber <span class="token operator">=</span> <span class="token function">getInstance</span><span class="token punctuation">(</span>inst<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token comment">// eventTime是当前触发更新的时间戳</span>
+    <span class="token keyword">const</span> eventTime <span class="token operator">=</span> <span class="token function">requestEventTime</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> suspenseConfig <span class="token operator">=</span> <span class="token function">requestCurrentSuspenseConfig</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 获取本次update的优先级</span>
+    <span class="token keyword">const</span> lane <span class="token operator">=</span> <span class="token function">requestUpdateLane</span><span class="token punctuation">(</span>fiber<span class="token punctuation">,</span> suspenseConfig<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 创建update对象</span>
+    <span class="token keyword">const</span> update <span class="token operator">=</span> <span class="token function">createUpdate</span><span class="token punctuation">(</span>eventTime<span class="token punctuation">,</span> lane<span class="token punctuation">,</span> suspenseConfig<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// payload就是setState的参数，回调函数或者是对象的形式。</span>
+    <span class="token comment">// 处理更新时参与计算新状态的过程</span>
+    update<span class="token punctuation">.</span>payload <span class="token operator">=</span> payload<span class="token punctuation">;</span>
+
+    <span class="token comment">// 将update放入fiber的updateQueue</span>
+    <span class="token function">enqueueUpdate</span><span class="token punctuation">(</span>fiber<span class="token punctuation">,</span> update<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 开始进行调度</span>
+    <span class="token function">scheduleUpdateOnFiber</span><span class="token punctuation">(</span>fiber<span class="token punctuation">,</span> lane<span class="token punctuation">,</span> eventTime<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><p>梳理一下 enqueueSetState 中具体做的事情：</p> <p><strong>找到 fiber</strong></p> <p>首先获取产生更新的组件所对应的 fiber 节点，因为产生的 update 对象需要放到 fiber 节点的 updateQueue 上。然后获取当前这个 update 产生的时间，这与更新的饥饿问题相关，暂且不考虑，而且下一步的 suspenseConfig 可以先忽略。</p> <p><strong>计算优先级</strong></p> <p>之后比较重要的是计算当前这个更新它的优先级 lane：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> lane <span class="token operator">=</span> <span class="token function">requestUpdateLane</span><span class="token punctuation">(</span>fiber<span class="token punctuation">,</span> suspenseConfig<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre></div><p>计算这个优先级的时候，是如何决定根据什么东西去计算呢？这还得从 React 的合成事件说起。</p> <p>事件触发时，合成事件机制调用 scheduler 中的 runWithPriority 函数，目的是以该交互事件对应的事件优先级去派发真正的事件流程。runWithPriority 会将事件优先级转化为 scheduler 内部的优先级并记录下来。当调用 requestUpdateLane 计算 lane 的时候，会去获取 scheduler 中的优先级，以此作为 lane 计算的依据。</p> <p><strong>创建 update 对象， 入队 updateQueue</strong></p> <p>根据 lane 和 eventTime 还有 suspenseConfig，去创建一个 update 对象，结构如下：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token literal-property property">update</span><span class="token operator">:</span> Update<span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+  eventTime<span class="token punctuation">,</span>
+  lane<span class="token punctuation">,</span>
+  suspenseConfig<span class="token punctuation">,</span>
+  <span class="token literal-property property">tag</span><span class="token operator">:</span> UpdateState<span class="token punctuation">,</span>
+  <span class="token literal-property property">payload</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">callback</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">next</span><span class="token operator">:</span> <span class="token keyword">null</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><ul><li>eventTime：更新的产生时间</li> <li>lane：表示优先级</li> <li>suspenseConfig：任务挂起相关</li> <li>tag：表示更新是哪种类型（UpdateState，ReplaceState，ForceUpdate，CaptureUpdate）</li> <li>payload：更新所携带的状态。
+<ul><li>在类组件中，有两种可能，对象（{}），和函数（(prevState, nextProps):newState =&gt; {}）</li> <li>根组件中，为 React.element，即 ReactDOM.render 的第一个参数</li></ul></li> <li>callback：可理解为 setState 的回调</li> <li>next：指向下一个 update 的指针</li></ul> <p>再之后就是去调用 React 任务执行的入口函数：<code>scheduleUpdateOnFiber</code>去调度执行更新任务了。</p> <p>现在知道了，产生更新的 fiber 节点上会有一个 updateQueue，它包含了刚刚产生的 update。下面该进入<code>scheduleUpdateOnFiber</code>了，开始进入真正的调度流程。通过调用<code>scheduleUpdateOnFiber</code>，render 阶段的构建 workInProgress 树的任务会被调度执行，这个过程中，fiber 上的 updateQueue 会被处理。</p> <h1 id="调度准备"><a href="#调度准备" class="header-anchor">#</a> 调度准备</h1> <p>React 的更新入口是<code>scheduleUpdateOnFiber</code>，它区分 update 的 lane，将同步更新和异步更新分流，让二者进入各自的流程。但在此之前，它会做几个比较重要的工作：</p> <ul><li>检查是否是无限更新，例如在 render 函数中调用了 setState。</li> <li>从产生更新的节点开始，往上一直循环到 root，目的是将 fiber.lanes 一直向上收集，收集到父级节点的 childLanes 中，childLanes 是识别这个 fiber 子树是否需要更新的关键。</li> <li>在 root 上标记更新，也就是将 update 的 lane 放到 root.pendingLanes 中，每次渲染的优先级基准：renderLanes 就是取自 root.pendingLanes 中最紧急的那一部分 lanes。
+这三步可以视为更新执行前的准备工作。</li></ul> <p>第 1 个可以防止死循环卡死的情况。</p> <p>第 2 个，如果 fiber.lanes 不为空，则说明该 fiber 节点有更新，而 fiber.childLanes 是判断当前子树是否有更新的重要依据，若有更新，则继续向下构建，否则直接复用已有的 fiber 树，就不往下循环了，可以屏蔽掉那些无需更新的 fiber 节点。</p> <p>第 3 个是将当前 update 对象的 lane 加入到 root.pendingLanes 中，保证真正开始做更新任务的时候，获取到 update 的 lane，从而作为本次更新的渲染优先级（renderLanes），去更新。</p> <blockquote><p>实际上在更新时候获取到的 renderLanes，并不一定包含 update 对象的 lane，因为有可能它只是一个较低优先级的更新，有可能在它前面有高优先级的更新</p></blockquote> <p>梳理完<code>scheduleUpdateOnFiber</code>的大致逻辑之后，来看一下它的源码：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">export</span> <span class="token keyword">function</span> <span class="token function">scheduleUpdateOnFiber</span><span class="token punctuation">(</span>
+  <span class="token parameter"><span class="token literal-property property">fiber</span><span class="token operator">:</span> Fiber<span class="token punctuation">,</span>
+  <span class="token literal-property property">lane</span><span class="token operator">:</span> Lane<span class="token punctuation">,</span>
+  <span class="token literal-property property">eventTime</span><span class="token operator">:</span> number<span class="token punctuation">,</span></span>
+<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 第一步，检查是否有无限更新</span>
+  <span class="token function">checkForNestedUpdates</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token operator">...</span>
+  <span class="token comment">// 第二步，向上收集fiber.childLanes</span>
+  <span class="token keyword">const</span> root <span class="token operator">=</span> <span class="token function">markUpdateLaneFromFiberToRoot</span><span class="token punctuation">(</span>fiber<span class="token punctuation">,</span> lane<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token operator">...</span>
+
+  <span class="token comment">// 第三步，在root上标记更新，将update的lane放到root.pendingLanes</span>
+  <span class="token function">markRootUpdated</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span> lane<span class="token punctuation">,</span> eventTime<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token operator">...</span>
+
+  <span class="token comment">// 根据Scheduler的优先级获取到对应的React优先级</span>
+  <span class="token keyword">const</span> priorityLevel <span class="token operator">=</span> <span class="token function">getCurrentPriorityLevel</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>lane <span class="token operator">===</span> SyncLane<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 本次更新是同步的，例如传统的同步渲染模式</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>
+      <span class="token punctuation">(</span>executionContext <span class="token operator">&amp;</span> LegacyUnbatchedContext<span class="token punctuation">)</span> <span class="token operator">!==</span> NoContext <span class="token operator">&amp;&amp;</span>
+      <span class="token punctuation">(</span>executionContext <span class="token operator">&amp;</span> <span class="token punctuation">(</span>RenderContext <span class="token operator">|</span> CommitContext<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">===</span> NoContext
+    <span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 如果是本次更新是同步的，并且当前还未渲染，意味着主线程空闲，并没有React的</span>
+      <span class="token comment">// 更新任务在执行，那么调用performSyncWorkOnRoot开始执行同步任务</span>
+
+      <span class="token operator">...</span>
+
+      <span class="token function">performSyncWorkOnRoot</span><span class="token punctuation">(</span>root<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 如果是本次更新是同步的，不过当前有React更新任务正在进行，</span>
+      <span class="token comment">// 而且因为无法打断，所以调用ensureRootIsScheduled</span>
+      <span class="token comment">// 目的是去复用已经在更新的任务，让这个已有的任务</span>
+      <span class="token comment">// 把这次更新顺便做了</span>
+      <span class="token function">ensureRootIsScheduled</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span> eventTime<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token operator">...</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+
+    <span class="token operator">...</span>
+
+    <span class="token comment">// Schedule other updates after in case the callback is sync.</span>
+    <span class="token comment">// 如果是更新是异步的，调用ensureRootIsScheduled去进入异步调度</span>
+    <span class="token function">ensureRootIsScheduled</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span> eventTime<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">schedulePendingInteractions</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span> lane<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token operator">...</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>经过了前面的准备工作后，<code>scheduleUpdateOnFiber</code>最终会调用<code>ensureRootIsScheduled</code>，来让 React 任务被调度，这是一个非常重要的函数，它关乎<strong>同等或较低任务的收敛</strong>、
+<strong>高优先级任务插队</strong>和<strong>任务饥饿问题</strong>，下面详细讲解它。</p> <h1 id="开始调度"><a href="#开始调度" class="header-anchor">#</a> 开始调度</h1> <p>在开始讲解<code>ensureRootIsScheduled</code>之前，有必要弄清楚 React 的更新任务的本质。</p> <h2 id="react-任务的本质"><a href="#react-任务的本质" class="header-anchor">#</a> React 任务的本质</h2> <p>一个 update 的产生最终会使 React 在内存中根据现有的 fiber 树构建一棵新的 fiber 树，新的 state 的计算、diff 操作、以及一些生命周期的调用，都会在这个构建过程中进行。这个整体的构建工作被称为 render 阶段，这个 render 阶段整体就是一个完整的 React 更新任务，更新任务可以看作执行一个函数，这个函数在 concurrent 模式下就是<code>performConcurrentWorkOnRoot</code>，更新任务的调度可以看成是这个函数被 scheduler 按照任务优先级安排它何时执行。</p> <blockquote><p>Scheduler 的调度和 React 的调度是两个完全不同的概念，React 的调度是协调任务进入哪种 Scheduler 的调度模式，它的调度并不涉及任务的执行，而 Scheduler 是调度机制的真正核心，它是实打实地去执行任务，没有它，React 的任务再重要也无法执行，希望读者加以区分这两种概念。</p></blockquote> <p>当一个任务被调度之后，scheduler 就会生成一个任务对象（task），它的结构如下所示，除了 callback 之外暂时不需要关心其他字段的含义。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> newTask <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token literal-property property">id</span><span class="token operator">:</span> taskIdCounter<span class="token operator">++</span><span class="token punctuation">,</span>
+  <span class="token comment">// 任务函数，也就是 performConcurrentWorkOnRoot</span>
+  callback<span class="token punctuation">,</span>
+  <span class="token comment">// 任务调度优先级，由即将讲到的任务优先级转化而来</span>
+  priorityLevel<span class="token punctuation">,</span>
+  <span class="token comment">// 任务开始执行的时间点</span>
+  startTime<span class="token punctuation">,</span>
+  <span class="token comment">// 任务的过期时间</span>
+  expirationTime<span class="token punctuation">,</span>
+  <span class="token comment">// 在小顶堆任务队列中排序的依据</span>
+  <span class="token literal-property property">sortIndex</span><span class="token operator">:</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre></div><p>每当生成了一个这样的任务，它就会被挂载到 root 节点的<code>callbackNode</code>属性上，以表示当前已经有任务被调度了，同时会将任务优先级存储到 root 的<code>callbackPriority</code>上，
+表示如果有新的任务进来，必须用它的任务优先级和已有任务的优先级（root.callbackPriority）比较，来决定是否有必要取消已经有的任务。</p> <p>所以在调度任务的时候，任务优先级是不可或缺的一个重要角色。</p> <h2 id="任务优先级"><a href="#任务优先级" class="header-anchor">#</a> 任务优先级</h2> <p>任务本身是由更新产生的，因此任务优先级本质上是和 update 的优先级，即 update.lane 有关（只是有关，不一定是由它而来）。得出的任务优先级属于 lanePriority，它不是 update 的 lane，而且与 scheduler 内部的调度优先级是两个概念</p> <p>在 <strong>调度准备</strong> 的最后提到过，update.lane 会被放入 root.pendingLanes，随后会获取 root.pendingLanes 中最优先级的那些 lanes 作为 renderLanes。任务优先级的生成就发生在计算 renderLanes 的阶段，<strong>任务优先级其实就是 renderLanes 对应的 lanePriority</strong>。因为 renderLanes 是本次更新的优先级基准，所以它对应的 lanePriority 被作为任务优先级来衡量本次更新任务的优先级权重理所应当。</p> <blockquote><p>root.pendingLanes，包含了当前 fiber 树中所有待处理的 update 的 lane。</p></blockquote> <p>任务优先级有三类：</p> <ul><li>同步优先级：React 传统的同步渲染模式产生的更新任务所持有的优先级</li> <li>同步批量优先级：同步模式到 concurrent 模式过渡模式：blocking 模式产生的更新任务所持有的优先级</li> <li>concurrent 模式下的优先级：concurrent 模式产生的更新持有的优先级</li></ul> <p>最右面的两个 lane 分别为同步优先级和同步批量优先级，剩下左边的 lane 几乎所有都和 concurrent 模式有关。</p> <div class="language- extra-class"><pre class="language-text"><code>export const SyncLane: Lane = /*                        */ 0b0000000000000000000000000000001;
+export const SyncBatchedLane: Lane = /*                 */ 0b0000000000000000000000000000010;
+
+concurrent模式下的lanes：/*                               */ 0b1111111111111111111111111111100;
+</code></pre></div><p>计算 renderLanes 的函数是<code>getNextLanes</code>，生成任务优先级的函数是<code>getHighestPriorityLanes</code></p> <blockquote><p>任务优先级决定着任务在 React 中被如何调度，而由任务优先级转化成的任务调度优先级（上面给出的 scheduler 的 task 结构中的 priorityLevel），
+决定着 Scheduler 何时去处理这个任务。</p></blockquote> <h2 id="任务调度协调-ensurerootisscheduled"><a href="#任务调度协调-ensurerootisscheduled" class="header-anchor">#</a> 任务调度协调 - ensureRootIsScheduled</h2> <p>目前为止了解了任务和任务优先级的本质，下面正式进入任务的调度过程。React 这边对任务的调度本质上其实是以任务优先级为基准，去操作多个或单个任务。</p> <p>多个任务的情况，相对于新任务，会对现有任务进行<strong>或复用，或取消</strong>的操作，单个任务的情况，对任务进行<strong>或同步，或异步，或批量同步（暂时不需要关注）</strong> 的调度决策，
+这种行为可以看成是一种任务调度协调机制，这种协调通过<code>ensureRootIsScheduled</code>去实现。</p> <p>看一看<code>ensureRootIsScheduled</code>函数做的事情，先是准备本次任务调度协调所需要的 lanes 和任务优先级，然后判断是否真的需要调度</p> <ul><li>获取 root.callbackNode，即旧任务</li> <li>检查任务是否过期，将过期任务放入 root.expiredLanes，目的是让过期任务能够以同步优先级去进入调度（立即执行）</li> <li>获取 renderLanes（优先从 root.expiredLanes 获取），如果 renderLanes 是空的，说明不需要调度，直接 return 掉</li> <li>获取本次任务，即新任务的优先级：newCallbackPriority
+接下来是协调任务调度的过程：</li> <li>首先判断是否有必要发起一次新调度，方法是通过比较新任务的优先级和旧任务的优先级是否相等：
+<ul><li>相等，则说明无需再次发起一次调度，直接复用旧任务即可，让旧任务在处理更新的时候顺便把新任务给做了。</li> <li>不相等，则说明新任务的优先级一定高于旧任务，这种情况就是<strong>高优先级任务插队</strong>，需要把旧任务取消掉。</li></ul></li> <li>真正发起调度，看新任务的任务优先级：
+<ul><li>同步优先级：调用 scheduleSyncCallback 去同步执行任务。</li> <li>同步批量执行：调用 scheduleCallback 将任务以立即执行的优先级去加入调度。</li> <li>属于 concurrent 模式的优先级：调用 scheduleCallback 将任务以上面获取到的新任务优先级去加入调度。</li></ul></li></ul> <p>这里有两点需要说明：</p> <ol><li>为什么新旧任务的优先级如果不相等，那么新任务的优先级一定高于旧任务？
+这是因为每次调度去获取任务优先级的时候，都只获取 root.pendingLanes 中最紧急的那部分 lanes 对应的优先级，低优先级的 update 持有的 lane 对应的优先级是无法被获取到的。通过这种办法，可以将来自同一事件中的多个更新收敛到一个任务中去执行，言外之意就是同一个事件触发的多次更新的优先级是一样的，没必要发起多次任务调度。例如在一个事件中多次调用 setState：</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">class</span> <span class="token class-name">Demo</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  state <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token function-variable function">onClick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token literal-property property">count</span><span class="token operator">:</span> <span class="token number">2</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span>onClick<span class="token punctuation">}</span><span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>count<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>页面上会直接显示出 2，虽然 onClick 事件调用了两次 setState，但只会引起一次调度，设置 count 为 2 的那次调度被因为优先级与设置 count 为 1 的那次任务的优先级相同，
+所以没有去再次发起调度，而是复用了已有任务。这是 React17 对于多次 setState 优化实现的改变，之前是通过 batchingUpdate 这种机制实现的。</p> <ol start="2"><li>三种任务优先级的调度模式有何区别，行为表现上如何？</li></ol> <ul><li>同步优先级：传统的 React 同步渲染模式和过期任务的调度。通过 React 提供的<code>scheduleSyncCallback</code>函数将任务函数<strong>performSyncWorkOnRoot</strong>加入到 React 自己的同步队列（syncQueue）中，之后以 ImmediateSchedulerPriority 的优先级将循环执行 syncQueue 的函数加入到 scheduler 中，目的是让任务在下一次事件循环中被执行掉。但是因为 React 的控制，这种模式下的时间片会在任务都执行完之后再去检查，表现为没有时间片。</li> <li>同步批量执行：同步渲染模式到 concurrent 渲染模式的过渡模式 blocking 模式，会将任务函数<strong>performSyncWorkOnRoot</strong>以 ImmediateSchedulerPriority 的优先级加入到 scheduler 中，也是让任务在下一次事件循环中被执行掉，也不会有时间片的表现。</li> <li>属于 concurrent 模式的优先级：将任务函数<strong>performConcurrentWorkOnRoot</strong>以任务自己的优先级加入到 scheduler 中，scheduler 内部的会通过这个优先级控制该任务在 scheduler 内部任务队列中的排序，从而决定任务合适被执行，而且任务真正执行时会有时间片的表现，可以发挥出 scheduler 异步可中断调度的真正威力。</li></ul> <blockquote><p>要注意一点，用来做新旧任务比较的优先级与这里将任务加入到 scheduler 中传入的优先级不是一个，后者可由前者通过<code>lanePriorityToSchedulerPriority</code>转化而来。</p></blockquote> <p>经过以上的分析，相信大家已经对<code>ensureRootIsScheduled</code>的运行机制比较清晰了，现在看一下它的实现：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">ensureRootIsScheduled</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">root</span><span class="token operator">:</span> FiberRoot<span class="token punctuation">,</span> <span class="token literal-property property">currentTime</span><span class="token operator">:</span> number</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 获取旧任务</span>
+  <span class="token keyword">const</span> existingCallbackNode <span class="token operator">=</span> root<span class="token punctuation">.</span>callbackNode<span class="token punctuation">;</span>
+
+  <span class="token comment">// 记录任务的过期时间，检查是否有过期任务，有则立即将它放到root.expiredLanes，</span>
+  <span class="token comment">// 便于接下来将这个任务以同步模式立即调度</span>
+  <span class="token function">markStarvedLanesAsExpired</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span> currentTime<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 获取renderLanes</span>
+  <span class="token keyword">const</span> nextLanes <span class="token operator">=</span> <span class="token function">getNextLanes</span><span class="token punctuation">(</span>
+    root<span class="token punctuation">,</span>
+    root <span class="token operator">===</span> workInProgressRoot <span class="token operator">?</span> workInProgressRootRenderLanes <span class="token operator">:</span> NoLanes
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 获取renderLanes对应的任务优先级</span>
+  <span class="token keyword">const</span> newCallbackPriority <span class="token operator">=</span> <span class="token function">returnNextLanesPriority</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>nextLanes <span class="token operator">===</span> NoLanes<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 如果渲染优先级为空，则不需要调度</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>existingCallbackNode <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">cancelCallback</span><span class="token punctuation">(</span>existingCallbackNode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      root<span class="token punctuation">.</span>callbackNode <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+      root<span class="token punctuation">.</span>callbackPriority <span class="token operator">=</span> NoLanePriority<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 如果存在旧任务，那么看一下能否复用</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>existingCallbackNode <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 获取旧任务的优先级</span>
+    <span class="token keyword">const</span> existingCallbackPriority <span class="token operator">=</span> root<span class="token punctuation">.</span>callbackPriority<span class="token punctuation">;</span>
+
+    <span class="token comment">// 如果新旧任务的优先级相同，则无需调度</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>existingCallbackPriority <span class="token operator">===</span> newCallbackPriority<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">// 代码执行到这里说明新任务的优先级高于旧任务的优先级</span>
+    <span class="token comment">// 取消掉旧任务，实现高优先级任务插队</span>
+    <span class="token function">cancelCallback</span><span class="token punctuation">(</span>existingCallbackNode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 调度一个新任务</span>
+  <span class="token keyword">let</span> newCallbackNode<span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>newCallbackPriority <span class="token operator">===</span> SyncLanePriority<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 若新任务的优先级为同步优先级，则同步调度，传统的同步渲染和过期任务会走这里</span>
+    newCallbackNode <span class="token operator">=</span> <span class="token function">scheduleSyncCallback</span><span class="token punctuation">(</span>
+      <span class="token function">performSyncWorkOnRoot</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> root<span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>newCallbackPriority <span class="token operator">===</span> SyncBatchedLanePriority<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 同步模式到concurrent模式的过渡模式：blocking模式会走这里</span>
+    newCallbackNode <span class="token operator">=</span> <span class="token function">scheduleCallback</span><span class="token punctuation">(</span>
+      ImmediateSchedulerPriority<span class="token punctuation">,</span>
+      <span class="token function">performSyncWorkOnRoot</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> root<span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token comment">// concurrent模式的渲染会走这里</span>
+
+    <span class="token comment">// 根据任务优先级获取Scheduler的调度优先级</span>
+    <span class="token keyword">const</span> schedulerPriorityLevel <span class="token operator">=</span>
+      <span class="token function">lanePriorityToSchedulerPriority</span><span class="token punctuation">(</span>newCallbackPriority<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 计算出调度优先级之后，开始让Scheduler调度React的更新任务</span>
+    newCallbackNode <span class="token operator">=</span> <span class="token function">scheduleCallback</span><span class="token punctuation">(</span>
+      schedulerPriorityLevel<span class="token punctuation">,</span>
+      <span class="token function">performConcurrentWorkOnRoot</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">,</span> root<span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment">// 更新root上的任务优先级和任务，以便下次发起调度时候可以获取到</span>
+  root<span class="token punctuation">.</span>callbackPriority <span class="token operator">=</span> newCallbackPriority<span class="token punctuation">;</span>
+  root<span class="token punctuation">.</span>callbackNode <span class="token operator">=</span> newCallbackNode<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><code>ensureRootIsScheduled</code>实际上是在任务调度层面整合了高优先级任务的插队和任务饥饿问题的关键逻辑，这只是宏观层面的决策，决策背后的原因是 React 处理更新时
+对于不同优先级的 update 的取舍以及对 root.pendingLanes 的标记操作，这需要下沉到执行更新任务的过程中。</p> <h1 id="处理更新"><a href="#处理更新" class="header-anchor">#</a> 处理更新</h1> <p>一旦有更新产生，update 对象就会被放入 updateQueue 并挂载到 fiber 节点上。构建 fiber 树时，会带着 renderLanes 去处理 updateQueue，在 beginWork 阶段，对于类组件
+会调用<code>processUpdateQueue</code>函数，逐个处理这个链表上的每个 update 对象，计算新的状态，一旦 update 持有的优先级不够，那么就会跳过这个 update 的处理，并把这个被跳过的 update 的 lane 放到 fiber.lanes 中，好在 completeWork 阶段收集起来。
+关于优先级的部分比较好理解，就是只处理优先级足够的 update，跳过那些优先级不足的 update，并且将这些 update 的 lane 放到 fiber.lanes 中。直接来看一下实现：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> processUpdateQueue<span class="token operator">&lt;</span>State<span class="token operator">&gt;</span><span class="token punctuation">(</span>
+  <span class="token literal-property property">workInProgress</span><span class="token operator">:</span> Fiber<span class="token punctuation">,</span>
+  <span class="token literal-property property">props</span><span class="token operator">:</span> any<span class="token punctuation">,</span>
+  <span class="token literal-property property">instance</span><span class="token operator">:</span> any<span class="token punctuation">,</span>
+  <span class="token literal-property property">renderLanes</span><span class="token operator">:</span> Lanes<span class="token punctuation">,</span>
+<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+
+  <span class="token operator">...</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>firstBaseUpdate <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> update <span class="token operator">=</span> firstBaseUpdate<span class="token punctuation">;</span>
+    <span class="token keyword">do</span> <span class="token punctuation">{</span>
+      <span class="token keyword">const</span> updateLane <span class="token operator">=</span> update<span class="token punctuation">.</span>lane<span class="token punctuation">;</span>
+      <span class="token comment">// isSubsetOfLanes函数的意义是，判断当前更新的优先级（updateLane）</span>
+      <span class="token comment">// 是否在渲染优先级（renderLanes）中如果不在，那么就说明优先级不足</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token function">isSubsetOfLanes</span><span class="token punctuation">(</span>renderLanes<span class="token punctuation">,</span> updateLane<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+        <span class="token operator">...</span>
+
+        <span class="token comment">/*
+        *
+        * newLanes会在最后被赋值到workInProgress.lanes上，而它又最终
+        * 会被收集到root.pendingLanes。
+        *
+        * 再次更新时会从root上的pendingLanes中找出应该在本次中更新的优先
+        * 级（renderLanes），renderLanes含有本次跳过的优先级，再次进入，
+        * processUpdateQueue wip的优先级符合要求，被更新掉，低优先级任务
+        * 因此被重做
+        * */</span>
+        newLanes <span class="token operator">=</span> <span class="token function">mergeLanes</span><span class="token punctuation">(</span>newLanes<span class="token punctuation">,</span> updateLane<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+
+        <span class="token comment">// 优先级足够，去计算state</span>
+        <span class="token operator">...</span>
+
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 将newLanes赋值给workInProgress.lanes，</span>
+    <span class="token comment">// 就是将被跳过的update的lane放到fiber.lanes</span>
+    workInProgress<span class="token punctuation">.</span>lanes <span class="token operator">=</span> newLanes<span class="token punctuation">;</span>
+
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre></div><p>只处理优先级足够的 update 是让高优先级任务被执行掉的最本质原因，在循环了一次 updateQueue 之后，那些被跳过的 update 的 lane 又被放入了 fiber.lanes，现在，只需要将它放到 root.pendingLanes 中，就能表示在本轮更新后，仍然有任务未被处理，从而实现低优先级任务被重新调度。所以接下来的过程就是 fiber 节点的完成阶段：completeWork 阶段去收集这些 lanes。</p> <h1 id="收集未被处理的-lane"><a href="#收集未被处理的-lane" class="header-anchor">#</a> 收集未被处理的 lane</h1> <p>在 completeUnitOfWork 的时候，fiber.lanes 和 childLanes 被一层一层收集到父级 fiber 的 childLanes 中，该过程发生在<code>completeUnitOfWork</code>函数中调用的<code>resetChildLanes</code>，它循环 fiber 节点的子树，将子节点及其兄弟节点中的 lanes 和 childLanes 收集到当前正在 complete 阶段的 fiber 节点上的 childLanes。</p> <p>假设第 3 层中的<code>&lt;List/&gt;</code>和<code>&lt;Table/&gt;</code>组件都分别有 update 因为优先级不够而被跳过，那么在它们父级的 div fiber 节点 completeUnitOfWork 的时候，会调用<code>resetChildLanes</code>
+把它俩的 lanes 收集到 div fiber.childLanes 中，最终把所有的 lanes 收集到 root.pendingLanes.</p> <div class="language- extra-class"><pre class="language-text"><code>                                    root（pendingLanes: 0b01110）
+                                     |
+  1                                  App
+                                     |
+                                     |
+  2 compeleteUnitOfWork-----------&gt; div （childLanes: 0b01110）
+                                     /
+                                    /
+  3                              &lt;List/&gt; ---------&gt; &lt;Table/&gt; --------&gt; p
+                            （lanes: 0b00010）   （lanes: 0b00100）
+                         （childLanes: 0b01000）       /
+                                 /                   /
+                                /                   /
+  4                            p                   ul
+                                                  /
+                                                 /
+                                                li ------&gt; li
+</code></pre></div><p>在每一次往上循环的时候，都会调用 resetChildLanes，目的是将 fiber.childLanes 层层收集。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">completeUnitOfWork</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">unitOfWork</span><span class="token operator">:</span> Fiber</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 已经结束beginWork阶段的fiber节点被称为completedWork</span>
+  <span class="token keyword">let</span> completedWork <span class="token operator">=</span> unitOfWork<span class="token punctuation">;</span>
+
+  <span class="token keyword">do</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 向上一直循环到root的过程</span>
+    <span class="token operator">...</span>
+
+    <span class="token comment">// fiber节点的.flags上没有Incomplete，说明是正常完成了工作</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token punctuation">(</span>completedWork<span class="token punctuation">.</span>flags <span class="token operator">&amp;</span> Incomplete<span class="token punctuation">)</span> <span class="token operator">===</span> NoFlags<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+      <span class="token operator">...</span>
+      <span class="token comment">// 调用resetChildLanes去收集lanes</span>
+      <span class="token function">resetChildLanes</span><span class="token punctuation">(</span>completedWork<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+      <span class="token operator">...</span>
+
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span><span class="token comment">/*...*/</span><span class="token punctuation">}</span>
+
+    <span class="token operator">...</span>
+
+  <span class="token punctuation">}</span> <span class="token keyword">while</span> <span class="token punctuation">(</span>completedWork <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token operator">...</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><p>resetChildLanes 中只收集当前正在 complete 的 fiber 节点的子节点和兄弟节点的 lanes 以及 childLanes：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">resetChildLanes</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">completedWork</span><span class="token operator">:</span> Fiber</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token operator">...</span>
+
+  <span class="token keyword">let</span> newChildLanes <span class="token operator">=</span> NoLanes<span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span>enableProfilerTimer <span class="token operator">&amp;&amp;</span> <span class="token punctuation">(</span>completedWork<span class="token punctuation">.</span>mode <span class="token operator">&amp;</span> ProfileMode<span class="token punctuation">)</span> <span class="token operator">!==</span> NoMode<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment">// profile相关，无需关注</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    <span class="token comment">// 循环子节点和兄弟节点，收集lanes</span>
+    <span class="token keyword">let</span> child <span class="token operator">=</span> completedWork<span class="token punctuation">.</span>child<span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>child <span class="token operator">!==</span> <span class="token keyword">null</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// 收集过程</span>
+      newChildLanes <span class="token operator">=</span> <span class="token function">mergeLanes</span><span class="token punctuation">(</span>
+        newChildLanes<span class="token punctuation">,</span>
+        <span class="token function">mergeLanes</span><span class="token punctuation">(</span>child<span class="token punctuation">.</span>lanes<span class="token punctuation">,</span> child<span class="token punctuation">.</span>childLanes<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token punctuation">)</span><span class="token punctuation">;</span>
+      child <span class="token operator">=</span> child<span class="token punctuation">.</span>sibling<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// 将收集到的lanes放到该fiber节点的childLanes中</span>
+  completedWork<span class="token punctuation">.</span>childLanes <span class="token operator">=</span> newChildLanes<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>最后将这些收集到的 childLanes 放到 root.pendingLanes 的过程，是发生在本次更新的 commit 阶段中，因为 render 阶段的渲染优先级来自 root.pendingLanes，不能随意地修改它。所以要在 render 阶段之后的 commit 阶段去修改。看一下 commitRootImpl 中这个过程的实现：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">commitRootImpl</span><span class="token punctuation">(</span><span class="token parameter">root<span class="token punctuation">,</span> renderPriorityLevel</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token comment">// 将收集到的childLanes，连同root自己的lanes，一并赋值给remainingLanes</span>
+  <span class="token keyword">let</span> remainingLanes <span class="token operator">=</span> <span class="token function">mergeLanes</span><span class="token punctuation">(</span>finishedWork<span class="token punctuation">.</span>lanes<span class="token punctuation">,</span> finishedWork<span class="token punctuation">.</span>childLanes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// markRootFinished中会将remainingLanes赋值给remainingLanes</span>
+  <span class="token function">markRootFinished</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span> remainingLanes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token operator">...</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div><h1 id="重新发起调度"><a href="#重新发起调度" class="header-anchor">#</a> 重新发起调度</h1> <p>至此，低优先级任务的 lane 重新收集到了 root.pendingLanes 中，这时只需要再发起一次调度就可以了，通过在 commit 阶段再次调用<code>ensureRootIsScheduled</code>去实现，这样就又会走一遍调度的流程，低优先级任务被执行。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">commitRootImpl</span><span class="token punctuation">(</span><span class="token parameter">root<span class="token punctuation">,</span> renderPriorityLevel</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+
+  <span class="token comment">// 将收集到的childLanes，连同root自己的lanes，一并赋值给remainingLanes</span>
+  <span class="token keyword">let</span> remainingLanes <span class="token operator">=</span> <span class="token function">mergeLanes</span><span class="token punctuation">(</span>finishedWork<span class="token punctuation">.</span>lanes<span class="token punctuation">,</span> finishedWork<span class="token punctuation">.</span>childLanes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">// markRootFinished中会将remainingLanes赋值给remainingLanes</span>
+  <span class="token function">markRootFinished</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span> remainingLanes<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token operator">...</span>
+
+  <span class="token comment">// 在每次所有更新完成的时候都会调用这个ensureRootIsScheduled</span>
+  <span class="token comment">// 以保证root上任何的pendingLanes都能被处理</span>
+  <span class="token function">ensureRootIsScheduled</span><span class="token punctuation">(</span>root<span class="token punctuation">,</span> <span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token punctuation">}</span>
+</code></pre></div></div></section> <footer class="page-edit"><!----> <!----></footer> <!----> <div class="comments-wrapper"><!----></div> <ul class="side-bar sub-sidebar-wrapper" style="width:12rem;" data-v-cb1513f6><li class="level-2" data-v-cb1513f6><a href="/blog/handbook/React/priority.html#react-任务的本质" class="sidebar-link reco-side-react-任务的本质" data-v-cb1513f6>React 任务的本质</a></li><li class="level-2" data-v-cb1513f6><a href="/blog/handbook/React/priority.html#任务优先级" class="sidebar-link reco-side-任务优先级" data-v-cb1513f6>任务优先级</a></li><li class="level-2" data-v-cb1513f6><a href="/blog/handbook/React/priority.html#任务调度协调-ensurerootisscheduled" class="sidebar-link reco-side-任务调度协调-ensurerootisscheduled" data-v-cb1513f6>任务调度协调 - ensureRootIsScheduled</a></li></ul></main> <!----></div></div></div></div><div class="global-ui"><!----><!----><canvas id="vuepress-canvas-cursor"></canvas><!----><div class="RibbonAnimation"></div><div></div><div class="reco-bgm-panel" data-v-b1d3339e><audio id="bgm" src="http://music.163.com/song/media/outer/url?id=64956.mp3" data-v-b1d3339e></audio> <div class="reco-float-box" style="bottom:200px;z-index:999999;display:none;" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><img data-v-b1d3339e></div> <div class="reco-bgm-box" style="left:10px;bottom:10px;z-index:999999;" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><div class="reco-bgm-cover" style="background-image:url(undefined);" data-v-b1d3339e><div class="mini-operation" style="display:none;" data-v-b1d3339e><i class="reco-bgm reco-bgm-pause" style="display:none;" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-play" style="display:none;" data-v-b1d3339e></i></div> <div class="falut-message" style="display:none;" data-v-b1d3339e>
+          播放失败
+        </div></div> <div class="reco-bgm-info" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><div class="info-box" data-v-b1d3339e><i class="reco-bgm reco-bgm-music music" data-v-b1d3339e></i>富士山下</div> <div class="info-box" data-v-b1d3339e><i class="reco-bgm reco-bgm-artist" data-v-b1d3339e></i>陈奕迅</div> <div class="reco-bgm-progress" data-v-b1d3339e><div class="progress-bar" data-v-b1d3339e><div class="bar" data-v-b1d3339e></div></div></div> <div class="reco-bgm-operation" data-v-b1d3339e><i class="reco-bgm reco-bgm-last last" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-pause pause" style="display:none;" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-play play" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-next next" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-volume1 volume" data-v-b1d3339e></i> <i class="reco-bgm reco-bgm-mute mute" style="display:none;" data-v-b1d3339e></i> <div class="volume-bar" data-v-b1d3339e><div class="bar" data-v-b1d3339e></div></div></div></div> <div class="reco-bgm-left-box" data-v-b1d3339e data-v-41bcba48 data-v-b1d3339e><i class="reco-bgm reco-bgm-left" data-v-b1d3339e></i></div></div></div></div></div>
+    <script src="/blog/assets/js/app.5677d241.js" defer></script><script src="/blog/assets/js/3.24b53f44.js" defer></script><script src="/blog/assets/js/1.eea0989c.js" defer></script><script src="/blog/assets/js/21.1f533c3e.js" defer></script>
+  </body>
+</html>
